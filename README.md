@@ -1,6 +1,6 @@
-# Euro Inflation Monitor
+# Inflation PM Monitor
 
-A compact Streamlit relative-value dashboard using reproducible mock euro-area linker and EUR HICPxT swap data.
+A compact Streamlit relative-value dashboard using reproducible synthetic EU and UK linker and inflation-swap data.
 
 ## Run locally
 
@@ -13,12 +13,11 @@ The app creates its data in memory, so no data download or API key is required.
 
 ## Included
 
-- France, Germany and Italy inflation-linked bonds
-- EUR HICP ex-tobacco zero-coupon swaps
-- Bond breakeven, IOTA and forward inflation
-- Three-month excess carry
-- Real DV01 and inflation IE01 per €1m face value
-- Country-selectable EU and UK historical panels at 2Y, 5Y and 10Y
-- Sortable relative-value table and CSV export
+- France, Germany, Italy, Spain and United Kingdom inflation-linked bond sleeves
+- EUR HICPxT and UK RPI zero-coupon swap curves
+- Three consistent historical panels at 2Y, 5Y and 10Y for the selected market
+- Bond breakeven, IOTA, IOTA history, explicit one-year forwards and three-month gross carry/roll
+- Security-level position, breakeven, IOTA and carry/roll comparisons
+- Sortable relative-value table and snapshot-labelled CSV export
 
-All values are synthetic and intended for demonstration only.
+The market selector scopes the entire page. Every value is synthetic, generated in memory from one reproducible snapshot, and intended for demonstration only.
