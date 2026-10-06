@@ -165,23 +165,6 @@ bonds = make_euro_linkers()
 swaps = make_swap_table()
 history = make_history()
 
-with st.sidebar:
-    st.markdown("### Euro Inflation")
-    st.caption("Cash and swap relative value")
-    st.divider()
-    countries = st.multiselect(
-        "Sovereign issuers",
-        ["France", "Germany", "Italy"],
-        default=["France", "Germany", "Italy"],
-    )
-    maturity_range = st.slider("Residual maturity (years)", 1, 30, (2, 25))
-    min_outstanding = st.slider("Minimum outstanding (€bn)", 0, 30, 5)
-    st.divider()
-    st.caption("Mock market snapshot")
-    st.write("EUR HICP ex-tobacco")
-    st.write("Zero-coupon swap convention")
-    st.caption("Illustrative data—not investment advice.")
-
 filtered = bonds[
     bonds["Country"].isin(countries)
     & bonds["Years"].between(*maturity_range)
